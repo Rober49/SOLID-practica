@@ -1,0 +1,12 @@
+Principales errores del ejercicio de Principios SOLID:
+
+No se cumple el principio de responsabilidad única. A la hora de crear clases, hay varias que hacen más funciones de
+las que debería o que simplemente cuentan con ciertas características que no llegan siquiera a usarse. Un ejemplo de
+esto lo podemos encontrar en la clase FileSystemItem que implementa una gran cantidad de métodos variados tanto para
+ficheros como para directorios. Esto es incorrecto, ya que la clase File y la clase Directory implementan esta clase
+y al tener ambas los mismos métodos generales, ocurre que hay métodos inútiles para la clase File, puesto que
+están relacionados con los directorios y viceversa.
+
+En la clase FileSystemItem hay varios métodos que no pertenecen a esa clase y deberían de estar en una clase aparte,
+como por ejemplo externalizar los métodos exclusivamente relacionados con ficheros en una clase llamada FileOptions y
+los métodos relacionados con los directorios deberían de estar en una clase como DirectoryOptions.

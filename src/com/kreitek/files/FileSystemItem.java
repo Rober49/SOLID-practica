@@ -8,16 +8,19 @@ public interface FileSystemItem {
     FileSystemItem getParent();
     void setParent(FileSystemItem directory);
     String getFullPath();
-    String getExtension();
+    int getSize();
+    //El método listFiles debería ir en una clase aparte, exclusiva para directorios
+
     List<FileSystemItem> listFiles();
+
+    //Todos los métodos de aquí debajo deberían externalizarse, en una clase exclusiva para ficheros
+
+    String getExtension();
     void addFile(FileSystemItem file);
     void removeFile(FileSystemItem file);
-    int getSize();
     void open();
     void close();
     void setPosition(int numberOfBytesFromBeginning);
     byte[] read(int numberOfBytesToRead);
     void write(byte[] buffer);
-
-
 }

@@ -1,10 +1,11 @@
 package com.kreitek.files;
 
 import com.kreitek.files.error.InvalidFileFormatException;
+import com.kreitek.service.FileOptions;
 
 import java.util.List;
 
-public  class File extends FileSystemItemBase implements FileSystemItem {
+public class File extends FileSystemItemBase implements FileSystemItem {
 
     private int size = 0;
     private boolean isOpen = false;

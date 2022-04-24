@@ -1,5 +1,7 @@
 package com.kreitek.files;
 
+import com.kreitek.service.FileOptions;
+
 import java.util.List;
 
 public abstract class FileSystemItemBase implements FileSystemItem {
